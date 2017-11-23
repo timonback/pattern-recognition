@@ -20,3 +20,8 @@ Our Null-hypothesis H0 is that two iris patterns are different. We choose a give
 Below you will be asked to compute a value of the decision criterion d such that it leads to a given false acceptance rate. For this purpose, you can use the Matlab function normcdf and compute its value for different values of d to find one which leads to the given value of the false acceptance rate. Alternatively, you can use erfinv in an appropriate way.
 
 False rejection rate is the value of the integral of the distribution corresponding to the set S for HD > d.
+
+Before you start this assignment perform the following steps in order to get some understanding of the type of data you are going to work with:
+
+ - Consider the two-dimensional binary arrays in the files person01.mat to person20.mat. Each row of such an array person[i].m is a binary feature vector of 30 elements that is extracted from an iris image of a person that we call here person[i] (i = 1 ... 20). Hence, each row is a 30-dimensional binary iris code of that person. There are 20 such iris codes of each person in the corresponding file person[i]; each row of the array is one such binary iris code.
+ - Take a closer look at the rows of one such array and notice that two rows can differ in only a few positions (bits). Compare now two rows that come from two different files person[i] and person[j]. Notice that two such iris codes differ in about 15 positions.

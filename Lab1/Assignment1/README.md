@@ -7,3 +7,8 @@ Consider the 24x3 array in the file lab1_1.mat. Each row is a three-dimensional 
 2. Create 2D scatter plots of the data points with x- and y-axis being:
  - plot A: the two features for which the correlation coefficient is largest,
  - plot B: the two features for which the correlation coefficient is second largest.
+ 
+
+
+Some of the following matlab functions may be useful for this or the following assignment:
+  axis square, corrcoef, load, plot, hold on, hist, bar, length, find, rand, scatter, sprintf, sum, xor, normpdf, normcdf
