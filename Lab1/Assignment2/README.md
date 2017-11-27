@@ -13,7 +13,9 @@ Hint 2: Create a string array containing the strings ’person01.mat’, ’pers
 b) For set D: Choose randomly two different files person[i].mat and person[j].mat, i = 1,...,20; j = 1,...,20; i /= j. Choose randomly one row from each of these two files. Compute the HD of these two rows. Normalize the HD by dividing it by 30. Repeat this process 10000 times to obtain 10000 such normalized HD values.
 
 ## PART 2
-The distribution associated with the set S is the class-conditional probability density function that we measure a given HD value for two iris codes of the same person. The distribution associated with the set D is the class-conditional probability density function that we measure a given HD value for two iris codes of two different persons.
+The distribution associated with the set S is the class-conditional probability density function that we measure a given HD value for two iris codes of the same person.
+
+The distribution associated with the set D is the class-conditional probability density function that we measure a given HD value for two iris codes of two different persons.
 
 Our Null-hypothesis H0 is that two iris patterns are different. We choose a given value of the decision criterion d and compare the HD between the two iris patterns to d. If d < HD, we consider this as confirmation of our assumption that the two iris codes are different. If HD < d, we consider that our assumption that the two iris codes are different is not confirmed, i.e. we accept that they come from the same person. Note however that the normal distribution associated with D has a tail for HD < d. The integral under this tail gives the false acceptance rate.
 
