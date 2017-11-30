@@ -6,6 +6,7 @@ s = calcSetS(10000, codes);
 d = calcSetD(10000, codes);
 
 %Question 1
+% EDIT: Multiple graphs in one plot with: hold on
 ax1 = subplot(2,1,1);
 bin_size = 50;
 x = 0:(1/bin_size):1;
@@ -38,6 +39,8 @@ print('histogram_gauss.png', '-dpng')
 
 
 % Question 11
+% EDIT: 0.2 would be a good choice. norminv(0.2, s_mean, s_variance) is supposed to help with it?
+%
 % False Acceptance Rate (Error Type 1) is 0.0005
 % 5 iris patterns that are the same are rejected (0.0005 * 10000)
 % Use set S, use the gauss distribution
