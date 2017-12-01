@@ -31,3 +31,11 @@ end
 
 covariance
 
+X1 = [5 5 6];
+prob_density_x1 = mvnpdf(X1, features_mean, covariance);
+X2 = [3 5 7];
+prob_density_x2 = mvnpdf(X2, features_mean, covariance);
+X3 = [4 6.5 1];
+prob_density_x3 = mvnpdf(X3, features_mean, covariance);
+
+

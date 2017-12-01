@@ -16,7 +16,11 @@ ylabel('X2');
 zlabel('Propability Density');
 print('pdf.png', '-dpng')
 
-mahal_10_10 = mahal([10 10]', mu');
-mahal_0_0 = mahal([0 0]', mu');
-mahal_3_4 = mahal([3 4]', mu');
-mahal_6_8 = mahal([6 8]', mu');
+% Create first a random distribution using the given parameters
+mahal_X = mvnrnd(mu, sigma, 1000000);
+
+% Adjust for the squared values by taking the square root
+mahal_10_10 = sqrt(mahal([10 10], mahal_X));
+mahal_0_0 = sqrt(mahal([0 0], mahal_X));
+mahal_3_4 = sqrt(mahal([3 4], mahal_X));
+mahal_6_8 = sqrt(mahal([6 8], mahal_X));
