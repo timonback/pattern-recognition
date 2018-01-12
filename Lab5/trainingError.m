@@ -8,11 +8,12 @@ function [error, c1, c2] = trainingError(points, w)
    for point_index=1:length(points)
         point = points(point_index, :);
         % calc the distance between the prototypes and the point
-        w_dist = [
-            euclideanDistance(point(1), point(2), w(1,1), w(1,2)) ...
-            euclideanDistance(point(1), point(2), w(2,1), w(2,2)) ...
-            euclideanDistance(point(1), point(2), w(3,1), w(3,2))
-        ];
+        w_dist = arrayfun(@(i) euclideanDistance(point(1), point(2), w(i,1), w(i,2)), 1:size(w,1));
+%       w_dist = [
+%             euclideanDistance(point(1), point(2), w(1,1), w(1,2)) ...
+%             euclideanDistance(point(1), point(2), w(2,1), w(2,2)) ...
+%             euclideanDistance(point(1), point(2), w(3,1), w(3,2))
+%        ];
 
         % find the closest prototype
         w_index_closest = find(w_dist==min(w_dist));
