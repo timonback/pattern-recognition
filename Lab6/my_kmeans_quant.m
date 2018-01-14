@@ -15,7 +15,7 @@ function [error_q, reference, deriv] = my_kmeans_quant(data, kvalues, plusplus)
         for means_i = 1:length(means)
             data_means_i = data(closest == means_i,:);
             %data_means_diff = bsxfun(@minus, data_means_i, means(means_i, :));
-            data_means_diff = arrayfun(@(i) euclideanDistance(data_means_i(i, 1), data_means_i(i, 2), means(means_i, 1), means(means_i, 2)), 1:length(data_means_i));
+            data_means_diff = arrayfun(@(i) euclideanDistance(data_means_i(i, 1), data_means_i(i, 2), means(means_i, 1), means(means_i, 2)), 1:size(data_means_i, 1));
             error = error + 0.5 * sum(data_means_diff.^2);
         end
 
